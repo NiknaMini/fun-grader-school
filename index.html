@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Grade Checker 💖</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    input, button { font-size: 18px; padding: 8px; margin: 10px; }
+    #result { font-size: 24px; margin-top: 20px; color: purple; }
+  </style>
+</head>
+<body>
+  <h1>Fun Grade Checker 💖</h1>
+  <input type="number" id="gradeInput" placeholder="Enter your grade">
+  <button onclick="checkGrade()">Check Grade</button>
+  <div id="result"></div>
+
+  <script>
+    function checkGrade() {
+      const grade = parseInt(document.getElementById('gradeInput').value);
+      let message = '';
+
+      if (isNaN(grade)) {
+        message = "Please enter a valid number!";
+      } else if (grade < 0 || grade > 100) {
+        message = "Don't mess with me mf 😤";
+      } else if (grade < 10) {
+        message = "bruh wtf did you study with your butt 😭";
+      } else if (grade < 20) {
+        message = "loserrrrr 😬";
+      } else if (grade >= 54 && grade <= 59) {
+        message = "You barely passed! 😅";
+      } else if (grade === 67) {
+        message = "six sevennnnnn puhahahhahahahhhha 🤪";
+      } else if (grade === 69) {
+        message = "ayooooo 😎";
+      } else if (grade >= 60 && grade < 80) {
+        message = "You passed! 🎉";
+      } else if (grade >= 80 && grade <= 100) {
+        message = "You passed, topper! Nice job! 🏆";
+      } else {
+        message = "You failed. 😢";
+      }
+
+      document.getElementById('result').innerText = message;
+    }
+  </script>
+</body>
+</html>
